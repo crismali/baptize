@@ -1,4 +1,4 @@
-GBRANCH_ICON=""
+GBRANCH_ICON=""
 if [[ -z ${BAPTIZE_GIT_SHOW_STATS+x} ]]; then
   BAPTIZE_GIT_SHOW_STATS="no"
 fi
@@ -103,9 +103,9 @@ function __baptize_render_stats_segment {
     GDELETED_COUNT=`echo -e "$status" | egrep -o "^\s?D" | wc -l | tr -d ' '`
 
     PS1+="\\[$GMODIFIED_COLOR\\] ${GMODIFIED_COUNT}"
-    PS1+="${BAPTIZE_GIT_STATS_SEPARATOR}"
+    PS1+="\\[$BAPTIZE_GIT_STATS_SEPARATOR_COLOR\\]${BAPTIZE_GIT_STATS_SEPARATOR}"
     PS1+="\\[$STATS_ADDED_COLOR\\]${GADDED_COUNT}"
-    PS1+="${BAPTIZE_GIT_STATS_SEPARATOR}"
+    PS1+="\\[$BAPTIZE_GIT_STATS_SEPARATOR_COLOR\\]${BAPTIZE_GIT_STATS_SEPARATOR}"
     PS1+="\\[$STATS_DELETED_COLOR\\]${GDELETED_COUNT}\\[$GMODIFIED_COLOR\\]"
   fi
 }
