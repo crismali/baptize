@@ -1,4 +1,4 @@
-GBRANCH_ICON=""
+GBRANCH_ICON="🌵"
 if [[ -z ${BAPTIZE_GIT_SHOW_STATS+x} ]]; then
   BAPTIZE_GIT_SHOW_STATS="no"
 fi
@@ -142,7 +142,7 @@ function __baptize_git_prompt {
 
     PS1=""
 
-    __baptize_segment "$BAPTIZE_PROMPT_ICON" "$BAPTIZE_PROMPT_BG" "$BAPTIZE_PROMPT_FG" "$GSTATUS_BG"
+    __baptize_segment "$BAPTIZE_PROMPT_ICON" "$BAPTIZE_PROMPT_FG" "$BAPTIZE_PROMPT_BG" "$GSTATUS_BG"
     __baptize_render_stats_segment "$status"
     __baptize_render_git_icon_segment "$status"
     __baptize_segment "$branch $GBRANCH_ICON " "$GSTATUS_FG" "$GSTATUS_BG" "$BAPTIZE_PROMPT_BG"
